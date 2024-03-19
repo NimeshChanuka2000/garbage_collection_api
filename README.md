@@ -29,7 +29,7 @@ REST API
 
 **Report Generation :**
 
-    User Profle Details
+    User Profile Details
     Dustbin Details
 
 This is a Mobile based application for collection garbage.
