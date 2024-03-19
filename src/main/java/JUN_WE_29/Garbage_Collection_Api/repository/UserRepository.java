@@ -1,4 +1,4 @@
 package JUN_WE_29.Garbage_Collection_Api.repository;
 
-public interface CollectorRepository {
+public interface UserRepository {
 }
