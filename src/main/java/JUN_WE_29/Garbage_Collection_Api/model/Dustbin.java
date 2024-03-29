@@ -18,7 +18,7 @@ public class Dustbin {
 
     private float quantity;
 
-    private float smell;
+    private boolean smell;
 
     private String location;
 
