@@ -16,11 +16,9 @@ public class Dustbin {
 
     private String name;
 
-    private float quantity;
+    private String city;
 
-    private boolean smell;
-
-    private String location;
+    private String street;
 
     @ManyToMany
     @JoinTable(
@@ -29,4 +27,8 @@ public class Dustbin {
             inverseJoinColumns = @JoinColumn(name = "user_id")
     )
     private List<User> userList;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "sensor_id")
+    private Sensor sensor;
 }

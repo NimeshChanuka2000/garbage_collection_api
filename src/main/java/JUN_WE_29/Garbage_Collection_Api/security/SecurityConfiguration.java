@@ -27,10 +27,10 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(
-                    req->req.requestMatchers("/authenticate/**").permitAll()
+                    req->req.requestMatchers("/user/authenticate/**").permitAll()
+                            .requestMatchers("/user/register/**").permitAll()
                             .requestMatchers("/error/**").permitAll()
                             .requestMatchers("/api/auth/**").permitAll()
-//                            .requestMatchers("/users/**").hasAuthority("ADMIN")
                             .anyRequest().authenticated()
                 )
                 .userDetailsService(userService)
