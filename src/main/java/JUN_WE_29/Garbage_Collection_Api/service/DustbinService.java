@@ -13,4 +13,6 @@ public interface DustbinService {
 
     DustbinResponseDTO getDustbin(Long id);
 
+    List<DustbinResponseDTO> getAllDustbin();
+
 }

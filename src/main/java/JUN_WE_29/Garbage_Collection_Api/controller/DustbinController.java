@@ -28,5 +28,8 @@ public class DustbinController {
         return dustbinService.getDustbin(id);
     }
 
-
+    @GetMapping("/dustbins")
+    public List<DustbinResponseDTO> getAllDustbin(){
+        return dustbinService.getAllDustbin();
+    }
 }

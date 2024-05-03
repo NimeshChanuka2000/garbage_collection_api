@@ -52,4 +52,25 @@ public class DustbinServiceImpl implements DustbinService {
         return dustbinResponseDTO;
         }
 
+    @Override
+    public List<DustbinResponseDTO> getAllDustbin() {
+        List<Dustbin> dustbins = dustbinRepository.findAll();
+
+
+        List<DustbinResponseDTO> dustbinResponseDTOs = dustbins.stream()
+                .map(dustbin -> {
+
+                    DustbinResponseDTO responseDTO = new DustbinResponseDTO();
+                    responseDTO.setName(dustbin.getName());
+                    responseDTO.setCity(dustbin.getCity());
+                    responseDTO.setStreet(dustbin.getStreet());
+                    responseDTO.setMqData(dustbin.getSensor().getMqData());
+                    responseDTO.setDistance(dustbin.getSensor().getDistance());
+                    return responseDTO;
+                })
+                .collect(Collectors.toList());
+
+        return dustbinResponseDTOs;
+    }
+
 }
