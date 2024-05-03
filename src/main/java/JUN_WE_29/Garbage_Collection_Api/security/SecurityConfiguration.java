@@ -30,6 +30,7 @@ public class SecurityConfiguration {
                     req->req.requestMatchers("/user/authenticate/**").permitAll()
                             .requestMatchers("/user/register/**").permitAll()
                             .requestMatchers("/error/**").permitAll()
+                            .requestMatchers("/sensors").permitAll()
                             .requestMatchers("/api/auth/**").permitAll()
                             .anyRequest().authenticated()
                 )

@@ -13,7 +13,7 @@ public class SensorController {
 
     private final SensorService sensorService;
 
-    @RolesAllowed("ADMIN")
+//    @RolesAllowed("ADMIN")
     @PostMapping("/sensors")
     public void addSensor(@RequestBody SensorRequestDTO sensorRequestDTO) {
         sensorService.addSensor(sensorRequestDTO);
