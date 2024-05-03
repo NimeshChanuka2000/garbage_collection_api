@@ -16,13 +16,13 @@ public class DustbinController {
 
     private DustbinService dustbinService;
 
-    @RolesAllowed("ADMIN")
+//    @RolesAllowed("ADMIN")
     @PostMapping("/sensors/{id}/dustbins")
     public void addDustbin(@PathVariable Long id, @RequestBody DustbinRequestDTO dustbinRequestDTO){
         dustbinService.addDustbin(dustbinRequestDTO,id);
     }
 
-    @RolesAllowed("ADMIN")
+//    @RolesAllowed("ADMIN")
     @GetMapping("/dustbin/{id}")
     public DustbinResponseDTO getDustbin(@PathVariable Long id){
         return dustbinService.getDustbin(id);

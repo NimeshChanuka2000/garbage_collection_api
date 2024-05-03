@@ -31,6 +31,7 @@ public class SecurityConfiguration {
                             .requestMatchers("/user/register/**").permitAll()
                             .requestMatchers("/error/**").permitAll()
                             .requestMatchers("/sensors").permitAll()
+                            .requestMatchers("sensors/{id}/dustbins").permitAll()
                             .requestMatchers("/api/auth/**").permitAll()
                             .anyRequest().authenticated()
                 )
