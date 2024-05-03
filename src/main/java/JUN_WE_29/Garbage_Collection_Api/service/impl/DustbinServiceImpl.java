@@ -17,7 +17,6 @@ public class DustbinServiceImpl implements DustbinService {
     public DustbinResponseDTO addDustbin(DustbinRequestDTO dustbinRequestDTO) {
         Dustbin dustbin = new Dustbin();
         dustbin.setName(dustbinRequestDTO.getName());
-        dustbin.setLocation(dustbinRequestDTO.getLocation());
 
         dustbinRepository.save(dustbin);
 
