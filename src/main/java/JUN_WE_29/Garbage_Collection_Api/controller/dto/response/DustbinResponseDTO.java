@@ -10,5 +10,13 @@ import lombok.NoArgsConstructor;
 public class DustbinResponseDTO {
 
     private String name;
+
+    private String city;
+
+    private String street;
+
+    private Float mqData;
+
+    private Float distance;
 }
 

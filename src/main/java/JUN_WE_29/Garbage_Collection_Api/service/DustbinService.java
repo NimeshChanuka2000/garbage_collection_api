@@ -4,8 +4,13 @@ import JUN_WE_29.Garbage_Collection_Api.controller.dto.request.DustbinRequestDTO
 import JUN_WE_29.Garbage_Collection_Api.controller.dto.response.DustbinResponseDTO;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public interface DustbinService {
 
-    DustbinResponseDTO addDustbin(DustbinRequestDTO dustbinRequestDTODTO);
+    void addDustbin(DustbinRequestDTO dustbinRequestDTO, Long id);
+
+    DustbinResponseDTO getDustbin(Long id);
+
 }
