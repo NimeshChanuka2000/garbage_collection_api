@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DustbinResponseDTO {
 
-    private String name;
+
+    private String massage;
 }
 

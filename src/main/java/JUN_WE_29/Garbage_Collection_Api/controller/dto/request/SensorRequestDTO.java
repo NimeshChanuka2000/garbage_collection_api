@@ -7,13 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class DustbinRequestDTO {
+public class SensorRequestDTO {
 
-    private String name;
+    private float mqData;
 
-    private String city;
-
-    private String street;
-
+    private float distance;
 
 }

@@ -7,5 +7,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface DustbinService {
 
-    DustbinResponseDTO addDustbin(DustbinRequestDTO dustbinRequestDTODTO);
+    void addDustbin(DustbinRequestDTO dustbinRequestDTO, Long id);
 }
