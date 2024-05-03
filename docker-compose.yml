@@ -10,3 +10,10 @@ services:
       - "8082:8082"
     volumes:
       - /root/uploaded-files:/app/data
+    networks:
+      - bighut_lk_network
+
+networks:
+  bighut_lk_network:
+    external:
+      name: bighut_lk_network
