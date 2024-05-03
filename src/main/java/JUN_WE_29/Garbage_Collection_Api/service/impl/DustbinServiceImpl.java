@@ -10,7 +10,9 @@ import JUN_WE_29.Garbage_Collection_Api.service.DustbinService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor
@@ -33,5 +35,21 @@ public class DustbinServiceImpl implements DustbinService {
             dustbinRepository.save(dustbin);
         }
     }
+
+    @Override
+    public DustbinResponseDTO getDustbin(Long id) {
+        Optional<Dustbin>optionalDustbin = dustbinRepository.findById(id);
+        Dustbin dustbin = optionalDustbin.orElseThrow(
+                () -> new RuntimeException("Dustbin not found")
+        );
+        DustbinResponseDTO dustbinResponseDTO = new DustbinResponseDTO();
+        dustbinResponseDTO.setName(dustbin.getName());
+        dustbinResponseDTO.setCity(dustbin.getCity());
+        dustbinResponseDTO.setStreet(dustbin.getStreet());
+        dustbinResponseDTO.setMqData(dustbin.getSensor().getMqData());
+        dustbinResponseDTO.setDistance(dustbin.getSensor().getDistance());
+
+        return dustbinResponseDTO;
+        }
 
 }
