@@ -17,9 +17,9 @@ public class DustbinController {
     private DustbinService dustbinService;
 
 //    @RolesAllowed("ADMIN")
-    @PostMapping("/sensors/{id}/dustbins")
-    public void addDustbin(@PathVariable Long id, @RequestBody DustbinRequestDTO dustbinRequestDTO){
-        dustbinService.addDustbin(dustbinRequestDTO,id);
+    @PostMapping("dustbins")
+    public void addDustbin(@RequestBody DustbinRequestDTO dustbinRequestDTO){
+        dustbinService.addDustbin(dustbinRequestDTO);
     }
 
 //    @RolesAllowed("ADMIN")

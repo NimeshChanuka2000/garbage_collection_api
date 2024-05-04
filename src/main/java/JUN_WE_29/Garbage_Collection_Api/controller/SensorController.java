@@ -14,9 +14,9 @@ public class SensorController {
     private final SensorService sensorService;
 
 //    @RolesAllowed("ADMIN")
-    @PostMapping("/sensors")
-    public void addSensor(@RequestBody SensorRequestDTO sensorRequestDTO) {
-        sensorService.addSensor(sensorRequestDTO);
+    @PostMapping("/dustbin/{id}/sensors")
+    public void addSensor(@PathVariable Long id,@RequestBody SensorRequestDTO sensorRequestDTO) {
+        sensorService.addSensor(id,sensorRequestDTO);
     }
 
 }

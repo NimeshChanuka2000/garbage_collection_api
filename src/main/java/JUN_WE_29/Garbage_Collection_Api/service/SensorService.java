@@ -6,5 +6,5 @@ import org.springframework.stereotype.Service;
 @Service
 public interface SensorService {
 
-    void addSensor(SensorRequestDTO sensorRequestDTO);
+    void addSensor(Long id,SensorRequestDTO sensorRequestDTO);
 }

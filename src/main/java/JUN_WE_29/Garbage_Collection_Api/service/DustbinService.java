@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public interface DustbinService {
 
-    void addDustbin(DustbinRequestDTO dustbinRequestDTO, Long id);
+    void addDustbin(DustbinRequestDTO dustbinRequestDTO);
 
     DustbinResponseDTO getDustbin(Long id);
 

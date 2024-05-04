@@ -17,7 +17,9 @@ public class Sensor {
     private float distance;
     private LocalDateTime createdAt;
 
-    @OneToOne(mappedBy = "sensor")
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "dustbin_id")
     private Dustbin dustbin;
 
     @PrePersist

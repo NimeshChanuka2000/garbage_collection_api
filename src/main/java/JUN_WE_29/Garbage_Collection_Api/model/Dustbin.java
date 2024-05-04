@@ -28,7 +28,6 @@ public class Dustbin {
     )
     private List<User> userList;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "sensor_id")
+    @OneToOne(mappedBy = "dustbin")
     private Sensor sensor;
 }
